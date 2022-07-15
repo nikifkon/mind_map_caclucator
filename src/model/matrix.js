@@ -232,7 +232,12 @@ class Matrix {
             for (let j = 1; j < n + 1; j++) {
                 let a = this.data[i-1][j-1][0];
                 let b = this.data[i-1][j-1][1];
-                data[i-1][j-1] = Math.abs(a + b)/(Math.abs(a) + Math.abs(b)); 
+                if (a == 0 && b == 0) {
+                    data[i-1][j-1] = 0;
+                }
+                else {
+                    data[i-1][j-1] = Math.abs(a + b)/(Math.abs(a) + Math.abs(b)); 
+                }
             }
         }
         let res = new Matrix(n, n, data);
@@ -258,7 +263,12 @@ class Matrix {
             for (let j = 1; j < n + 1; j++) {
                 let a = this.data[i-1][j-1][0];
                 let b = this.data[i-1][j-1][1];
-                data[i-1][j-1] = 1 - (Math.abs(a + b)/(Math.abs(a) + Math.abs(b))); 
+                if (a == 0 && b == 0) {
+                    data[i-1][j-1] = 1;
+                }
+                else {
+                    data[i-1][j-1] = 1 - (Math.abs(a + b)/(Math.abs(a) + Math.abs(b)));
+                }
             }
         }
         let res = new Matrix(n, n, data);

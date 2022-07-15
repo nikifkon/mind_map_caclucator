@@ -16,6 +16,8 @@
     "react-dom": "^18.2.0",
     "react-katex": "^2.0.2",
     "react-scripts": "5.0.1",
+    "recharts": "^2.1.12",
+    "victory": "^36.5.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
